@@ -4,8 +4,9 @@ Static concept files for the Flags USA x USO homepage announcement work.
 
 ## Files
 
-- `banner-mockups.html`: homepage CTA concept sheet with five announcement treatments
-- `index.html`: standalone partnership landing page concept
+- `index.html`: homepage CTA concept sheet with five announcement treatments
+- `banner-mockups.html`: source copy of the homepage CTA concept sheet
+- `partnership-landing.html`: standalone partnership landing page concept
 
 ## Assets
 
