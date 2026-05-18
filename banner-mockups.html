@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USO Banner Mockups — Flags USA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Brand tokens ───────────────────────────────────────── */
+    :root {
+      --navy:  #1e343d;
+      --red:   #a62b25;
+      --cream: #f8f5ef;
+      --blue:  #227395;
+      --black: #090302;
+      --line:  #ddd8d0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { background: #0c1619; font-family: 'Jost', 'Futura', 'Century Gothic', sans-serif; -webkit-font-smoothing: antialiased; color: #dfe6e9; }
+
+    /* ── Page masthead ───────────────────────────────────────── */
+    .pg-head  { max-width: 1240px; margin: 0 auto; padding: 52px 48px 40px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .pg-eye   { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+    .pg-title { font-family: 'Futura', 'Century Gothic', 'Jost', sans-serif; font-size: 32px; font-weight: 700; color: #ece6db; line-height: 1.1; margin-bottom: 10px; }
+    .pg-desc  { font-size: 14px; color: #5a7580; line-height: 1.6; max-width: 560px; }
+
+    /* ── Concept sections ────────────────────────────────────── */
+    .concept { max-width: 1240px; margin: 0 auto; padding: 52px 48px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .concept-hd { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 36px; }
+    .ctag { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; margin-top: 3px; }
+    .ctag-a { background: rgba(166,43,37,0.15); color: #e07570; border: 1px solid rgba(166,43,37,0.3); }
+    .ctag-b { background: rgba(20,50,65,0.5);   color: #7ab0d4; border: 1px solid rgba(100,160,210,0.25); }
+    .ctag-c { background: rgba(130,90,20,0.25);  color: #d4ad60; border: 1px solid rgba(180,130,30,0.3); }
+    .ctag-d { background: rgba(25,100,60,0.2);   color: #5bc98e; border: 1px solid rgba(25,100,60,0.35); }
+    .ctag-e { background: rgba(90,50,130,0.25);  color: #b48ee0; border: 1px solid rgba(120,70,170,0.35); }
+    .concept-hd h2 { font-family: 'Futura', 'Century Gothic', 'Jost', sans-serif; font-size: 19px; font-weight: 700; color: #dfe6e9; margin-bottom: 5px; }
+    .concept-hd p  { font-size: 13.5px; color: #5a7580; line-height: 1.55; }
+
+    /* ── View labels ─────────────────────────────────────────── */
+    .view-hd { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; margin-top: 32px; }
+    .vl { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #2e4852; white-space: nowrap; }
+    .vr { flex: 1; height: 1px; background: rgba(255,255,255,0.05); }
+
+    /* ── Browser chrome ──────────────────────────────────────── */
+    .chrome { border-radius: 10px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.05); }
+    .chrome-bar { background: #222c30; height: 36px; display: flex; align-items: center; padding: 0 14px; gap: 7px; }
+    .cd { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .cd-r{background:#ff5f57;} .cd-y{background:#febc2e;} .cd-g{background:#28c840;}
+    .chrome-url { margin-left: 8px; background: #181f23; border-radius: 4px; height: 20px; padding: 0 12px; display: flex; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 10.5px; color: #2e4852; max-width: 300px; flex: 1; }
+
+    /* ══════════════════════════════════════════════════════════
+       FLAGS USA SITE CHROME
+    ══════════════════════════════════════════════════════════ */
+    .fu-topbar { background: var(--navy); padding: 7px 32px; display: flex; align-items: center; justify-content: space-between; }
+    .fu-tl { font-size: 11.5px; font-weight: 500; color: rgba(255,255,255,0.88); display: flex; align-items: center; gap: 4px; }
+    .fu-tl a { color: rgba(255,255,255,0.88); text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
+    .fu-tr { font-size: 11.5px; color: rgba(255,255,255,0.62); display: flex; align-items: center; gap: 8px; }
+    .fu-tr a { color: rgba(255,255,255,0.62); text-decoration: none; }
+    .fu-tr span { color: rgba(255,255,255,0.2); }
+
+    .fu-mainnav { background: #fff; padding: 0 32px; height: 68px; display: flex; align-items: center; gap: 20px; border-bottom: 1px solid #edeae4; }
+    .fu-logo img { height: 24px; width: auto; display: block; }
+    .fu-search { flex: 1; display: flex; height: 44px; border-radius: 22px; overflow: hidden; border: 1.5px solid #d4cdc5; background: #f0ebe3; }
+    .fu-sc { display: flex; align-items: center; gap: 5px; padding: 0 14px; border-right: 1.5px solid #d4cdc5; font-size: 12.5px; font-weight: 600; color: #333; white-space: nowrap; }
+    .fu-sc .chv { font-size: 9px; opacity: 0.5; }
+    .fu-si { flex: 1; border: none; background: transparent; padding: 0 16px; font-size: 13px; color: #999; font-family: 'Jost', sans-serif; outline: none; }
+    .fu-icons { display: flex; align-items: center; gap: 18px; flex-shrink: 0; color: var(--navy); }
+
+    .fu-subnav { background: #fff; border-bottom: 1px solid #e4e0da; padding: 0 32px; display: flex; align-items: center; height: 44px; overflow: hidden; }
+    .fu-snl { font-size: 12.5px; font-weight: 600; color: var(--navy); padding: 0 10px; height: 100%; display: flex; align-items: center; text-decoration: none; white-space: nowrap; position: relative; flex-shrink: 0; }
+    .fu-snl.active { border-bottom: 2.5px solid var(--navy); }
+    .fu-snl .ch { font-size: 8px; margin-left: 2px; opacity: 0.5; }
+
+    /* Hero */
+    .fu-hero { position: relative; height: 445px; overflow: hidden; background: #1a2226; }
+    .fu-hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('./hero-factory.jpg');
+      background-size: cover; background-position: center 40%;
+      filter: brightness(0.45) saturate(0.9);
+    }
+    .fu-hero-cnt { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 40px; }
+    .fu-h1  { font-family: 'Futura', 'Century Gothic', 'Jost', sans-serif; font-size: 46px; font-weight: 700; color: #fff; line-height: 1.1; margin-bottom: 16px; max-width: 560px; letter-spacing: 0.01em; }
+    .fu-hsub { font-size: 14px; color: rgba(255,255,255,0.76); line-height: 1.65; max-width: 480px; margin-bottom: 28px; font-weight: 400; }
+    .fu-hbtn { display: inline-flex; align-items: center; padding: 12px 30px; border: 2px solid rgba(255,255,255,0.88); border-radius: 100px; color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; }
+
+    /* ══════════════════════════════════════════════════════════
+       SHARED BANNER STRIP (used by A, B, C-below, and D-below)
+    ══════════════════════════════════════════════════════════ */
+
+    /* Light strip */
+    .banner-a { background: var(--cream); border-top: 3px solid var(--red); border-bottom: 1px solid #ddd8ce; padding: 0 32px; height: 54px; display: flex; align-items: center; gap: 16px; }
+    .ba-logos { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .ba-logos img.flogo { height: 18px; width: auto; }
+    .ba-logos .bx { font-size: 10px; font-weight: 700; color: #c8c0b5; }
+    .ba-logos img.ulogo { height: 32px; width: auto; }
+    .ba-div { width: 1px; height: 24px; background: #d8d2c8; flex-shrink: 0; }
+    .ba-copy { flex: 1; display: flex; align-items: center; gap: 8px; }
+    .ba-news { font-family: 'Newsreader', serif; font-style: italic; font-weight: 700; font-size: 15px; color: var(--red); white-space: nowrap; }
+    .ba-sep  { color: #c8c0b5; font-size: 12px; }
+    .ba-text { font-size: 13.5px; font-weight: 500; color: var(--navy); }
+    .ba-cta  { flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; background: var(--red); color: #fff; font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 100px; text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; }
+
+    /* Dark strip */
+    .banner-b { background: var(--navy); padding: 0 32px; height: 56px; display: flex; align-items: center; justify-content: center; gap: 22px; }
+    .bb-logos { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .bb-logos img.flogo { height: 17px; width: auto; filter: brightness(0) invert(1); opacity: 0.92; }
+    .bb-logos .bx { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.28); }
+    .bb-logos img.ulogo { height: 34px; width: auto; box-shadow: 0 0 0 1.5px rgba(255,255,255,0.15); border-radius: 2px; }
+    .bb-copy { display: flex; align-items: center; gap: 8px; }
+    .bb-news { font-family: 'Newsreader', serif; font-style: italic; font-weight: 700; font-size: 15.5px; color: #fff; white-space: nowrap; }
+    .bb-sep  { color: rgba(255,255,255,0.22); font-size: 12px; }
+    .bb-text { font-size: 13.5px; font-weight: 500; color: rgba(255,255,255,0.8); white-space: nowrap; }
+    .bb-cta  { flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; background: var(--red); color: #fff; font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 100px; text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; }
+
+    /* ══════════════════════════════════════════════════════════
+       OPTION C — strip BELOW the hero
+       Re-uses .banner-a / .banner-b markup, no top-border on first rule
+    ══════════════════════════════════════════════════════════ */
+    /* The .banner-a already works; for "below hero" placement the border-top
+       acts as a divider from the hero which is fine. No extra CSS needed. */
+
+    /* ══════════════════════════════════════════════════════════
+       OPTION E — hero floating card (smaller)
+    ══════════════════════════════════════════════════════════ */
+    .hero-card,
+    .hero-card-static {
+      width: 256px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.985) 0%, rgba(252,249,244,0.975) 100%);
+      border-radius: 16px;
+      padding: 16px 18px 15px;
+      border: 1px solid rgba(255,255,255,0.55);
+      overflow: hidden;
+    }
+    .hero-card {
+      position: absolute;
+      bottom: 24px;
+      right: 28px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 10px 24px rgba(9,3,2,0.18);
+      backdrop-filter: blur(10px);
+    }
+    .hero-card::before,
+    .hero-card-static::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #a62b25 0%, #d15b4d 55%, rgba(209,91,77,0) 100%);
+    }
+    .hc-pill  { display: inline-flex; align-items: center; gap: 6px; font-family: 'JetBrains Mono', monospace; font-size: 8.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 9px; }
+    .hc-pill .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 4px rgba(166,43,37,0.08); }
+    .hc-title { font-family: 'Newsreader', serif; font-style: italic; font-weight: 700; font-size: 18px; color: var(--navy); line-height: 1.08; margin-bottom: 11px; letter-spacing: -0.01em; }
+    .hc-logos { display: flex; align-items: center; gap: 9px; margin-bottom: 11px; padding: 9px 11px; border-radius: 10px; background: rgba(248,245,239,0.92); border: 1px solid #ece4d8; }
+    .hc-logos img.flogo { height: 12px; width: auto; }
+    .hc-logos .bx { font-size: 9px; font-weight: 700; color: #c0c8cc; }
+    .hc-logos img.ulogo { height: 24px; width: auto; }
+    .hc-body  { font-size: 10.9px; color: #3e5560; line-height: 1.6; margin-bottom: 13px; }
+    .hc-cta   { display: flex; align-items: center; justify-content: center; gap: 6px; background: var(--red); color: #fff; font-size: 11px; font-weight: 700; padding: 9px 15px; border-radius: 100px; text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; width: 100%; box-shadow: inset 0 -1px 0 rgba(0,0,0,0.16); }
+
+    /* Standalone wrappers */
+    .sa-wrap { border-radius: 10px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04); }
+    .sa-card-wrap { background: var(--cream); border-radius: 10px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04); display: flex; align-items: center; justify-content: center; padding: 48px; }
+    .hero-card-static { position: relative; box-shadow: 0 14px 40px rgba(30,52,61,0.16), 0 0 0 1px rgba(255,255,255,0.65); }
+
+    .pg-foot { height: 80px; }
+
+    /* SVG icon helper */
+    .arr { display: inline-block; vertical-align: middle; margin-left: 3px; }
+  </style>
+</head>
+<body>
+
+<!-- ── Page header ────────────────────────────────────────── -->
+<header class="pg-head">
+  <p class="pg-eye">Internal Design Mockup · Flags USA × USO</p>
+  <h1 class="pg-title">Homepage Announcement Concepts</h1>
+  <p class="pg-desc">Five concepts for the USO partnership CTA. A and B are strips above the hero; C and D move that treatment below the hero in light and dark variants; E integrates a floating card inside the hero. Each is shown in full page context, then as a standalone.</p>
+</header>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     OPTION A — LIGHT STRIP ABOVE HERO
+══════════════════════════════════════════════════════════ -->
+<section class="concept">
+  <div class="concept-hd">
+    <span class="ctag ctag-a">Option A</span>
+    <div>
+      <h2>Light strip — above hero</h2>
+      <p>Cream background, 3px red accent border. Sits between the sub-nav and hero. Conversational, friendly, easy to implement.</p>
+    </div>
+  </div>
+
+  <div class="view-hd"><span class="vl">On the homepage</span><div class="vr"></div></div>
+  <div class="chrome">
+    <div class="chrome-bar"><div class="cd cd-r"></div><div class="cd cd-y"></div><div class="cd cd-g"></div><div class="chrome-url">flagsusa.com</div></div>
+    <div class="fu-topbar">
+      <div class="fu-tl">Get 15% off your first order when you <a href="#">subscribe</a>.</div>
+      <div class="fu-tr"><a href="#">About Us</a><span>|</span><a href="#">Flag Info</a></div>
+    </div>
+    <div class="fu-mainnav">
+      <div class="fu-logo"><img src="./FlagsUSA-logo.svg" alt="Flags USA"></div>
+      <div class="fu-search"><div class="fu-sc">All <span class="chv">▾</span></div><input class="fu-si" type="text" placeholder="Search for flag sets" disabled></div>
+      <div class="fu-icons">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </div>
+    </div>
+    <div class="fu-subnav">
+      <a class="fu-snl active" href="#">Home</a><a class="fu-snl" href="#">Shop All <span class="ch">▾</span></a><a class="fu-snl" href="#">American Flags <span class="ch">▾</span></a><a class="fu-snl" href="#">State <span class="ch">▾</span></a><a class="fu-snl" href="#">World <span class="ch">▾</span></a><a class="fu-snl" href="#">Military &amp; Support <span class="ch">▾</span></a><a class="fu-snl" href="#">Custom <span class="ch">▾</span></a><a class="fu-snl" href="#">Specialty</a><a class="fu-snl" href="#">Flagpoles &amp; Hardware <span class="ch">▾</span></a>
+    </div>
+    <!-- STRIP ABOVE HERO -->
+    <div class="banner-a">
+      <div class="ba-logos"><img class="flogo" src="./FlagsUSA-logo.svg" alt="Flags USA"><span class="bx">×</span><img class="ulogo" src="./United_Service_Organizations_logo.svg.png" alt="USO"></div>
+      <div class="ba-div"></div>
+      <div class="ba-copy"><span class="ba-news">We have news!</span><span class="ba-sep">—</span><span class="ba-text">Flags USA is now an official partner of the USO.</span></div>
+      <a class="ba-cta" href="#">See the story <svg class="arr" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="fu-hero"><div class="fu-hero-bg"></div><div class="fu-hero-cnt"><h2 class="fu-h1">Proudly flying the American spirit</h2><p class="fu-hsub">Flags USA is a women-owned, family-run business dedicated to providing the highest-quality, American-made flags for every home, business, and heart.</p><a class="fu-hbtn" href="#">100% Made in the USA</a></div></div>
+  </div>
+
+  <div class="view-hd"><span class="vl">Standalone component</span><div class="vr"></div></div>
+  <div class="sa-wrap">
+    <div class="banner-a">
+      <div class="ba-logos"><img class="flogo" src="./FlagsUSA-logo.svg" alt="Flags USA"><span class="bx">×</span><img class="ulogo" src="./United_Service_Organizations_logo.svg.png" alt="USO"></div>
+      <div class="ba-div"></div>
+      <div class="ba-copy"><span class="ba-news">We have news!</span><span class="ba-sep">—</span><span class="ba-text">Flags USA is now an official partner of the USO.</span></div>
+      <a class="ba-cta" href="#">See the story <svg class="arr" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     OPTION B — DARK STRIP ABOVE HERO
+══════════════════════════════════════════════════════════ -->
+<section class="concept">
+  <div class="concept-hd">
+    <span class="ctag ctag-b">Option B</span>
+    <div>
+      <h2>Dark strip — above hero</h2>
+      <p>Brand navy background, white text, inverted logo lockup. More premium feel, still warmer than the existing version.</p>
+    </div>
+  </div>
+
+  <div class="view-hd"><span class="vl">On the homepage</span><div class="vr"></div></div>
+  <div class="chrome">
+    <div class="chrome-bar"><div class="cd cd-r"></div><div class="cd cd-y"></div><div class="cd cd-g"></div><div class="chrome-url">flagsusa.com</div></div>
+    <div class="fu-topbar">
+      <div class="fu-tl">Get 15% off your first order when you <a href="#">subscribe</a>.</div>
+      <div class="fu-tr"><a href="#">About Us</a><span>|</span><a href="#">Flag Info</a></div>
+    </div>
+    <div class="fu-mainnav">
+      <div class="fu-logo"><img src="./FlagsUSA-logo.svg" alt="Flags USA"></div>
+      <div class="fu-search"><div class="fu-sc">All <span class="chv">▾</span></div><input class="fu-si" type="text" placeholder="Search for flag sets" disabled></div>
+      <div class="fu-icons">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </div>
+    </div>
+    <div class="fu-subnav">
+      <a class="fu-snl active" href="#">Home</a><a class="fu-snl" href="#">Shop All <span class="ch">▾</span></a><a class="fu-snl" href="#">American Flags <span class="ch">▾</span></a><a class="fu-snl" href="#">State <span class="ch">▾</span></a><a class="fu-snl" href="#">World <span class="ch">▾</span></a><a class="fu-snl" href="#">Military &amp; Support <span class="ch">▾</span></a><a class="fu-snl" href="#">Custom <span class="ch">▾</span></a><a class="fu-snl" href="#">Specialty</a><a class="fu-snl" href="#">Flagpoles &amp; Hardware <span class="ch">▾</span></a>
+    </div>
+    <!-- STRIP ABOVE HERO -->
+    <div class="banner-b">
+      <div class="bb-logos"><img class="flogo" src="./FlagsUSA-logo.svg" alt="Flags USA"><span class="bx">×</span><img class="ulogo" src="./United_Service_Organizations_logo.svg.png" alt="USO"></div>
+      <div class="bb-copy"><span class="bb-news">We have news!</span><span class="bb-sep">—</span><span class="bb-text">Flags USA is proud to be an official partner of the USO.</span></div>
+      <a class="bb-cta" href="#">Learn more <svg class="arr" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="fu-hero"><div class="fu-hero-bg"></div><div class="fu-hero-cnt"><h2 class="fu-h1">Proudly flying the American spirit</h2><p class="fu-hsub">Flags USA is a women-owned, family-run business dedicated to providing the highest-quality, American-made flags for every home, business, and heart.</p><a class="fu-hbtn" href="#">100% Made in the USA</a></div></div>
+  </div>
+
+  <div class="view-hd"><span class="vl">Standalone component</span><div class="vr"></div></div>
+  <div class="sa-wrap">
+    <div class="banner-b">
+      <div class="bb-logos"><img class="flogo" src="./FlagsUSA-logo.svg" alt="Flags USA"><span class="bx">×</span><img class="ulogo" src="./United_Service_Organizations_logo.svg.png" alt="USO"></div>
+      <div class="bb-copy"><span class="bb-news">We have news!</span><span class="bb-sep">—</span><span class="bb-text">Flags USA is proud to be an official partner of the USO.</span></div>
+      <a class="bb-cta" href="#">Learn more <svg class="arr" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     OPTION C — STRIP BELOW THE HERO
+══════════════════════════════════════════════════════════ -->
+<section class="concept">
+  <div class="concept-hd">
+    <span class="ctag ctag-c">Option C</span>
+    <div>
+      <h2>Strip below the hero</h2>
+      <p>Hero runs full and uninterrupted — the announcement strip appears directly beneath it. Lets the hero image breathe fully before the eye lands on the CTA.</p>
+    </div>
+  </div>
+
+  <div class="view-hd"><span class="vl">On the homepage</span><div class="vr"></div></div>
+  <div class="chrome">
+    <div class="chrome-bar"><div class="cd cd-r"></div><div class="cd cd-y"></div><div class="cd cd-g"></div><div class="chrome-url">flagsusa.com</div></div>
+    <div class="fu-topbar">
+      <div class="fu-tl">Get 15% off your first order when you <a href="#">subscribe</a>.</div>
+      <div class="fu-tr"><a href="#">About Us</a><span>|</span><a href="#">Flag Info</a></div>
+    </div>
+    <div class="fu-mainnav">
+      <div class="fu-logo"><img src="./FlagsUSA-logo.svg" alt="Flags USA"></div>
+      <div class="fu-search"><div class="fu-sc">All <span class="chv">▾</span></div><input class="fu-si" type="text" placeholder="Search for flag sets" disabled></div>
+      <div class="fu-icons">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </div>
+    </div>
+    <div class="fu-subnav">
+      <a class="fu-snl active" href="#">Home</a><a class="fu-snl" href="#">Shop All <span class="ch">▾</span></a><a class="fu-snl" href="#">American Flags <span class="ch">▾</span></a><a class="fu-snl" href="#">State <span class="ch">▾</span></a><a class="fu-snl" href="#">World <span class="ch">▾</span></a><a class="fu-snl" href="#">Military &amp; Support <span class="ch">▾</span></a><a class="fu-snl" href="#">Custom <span class="ch">▾</span></a><a class="fu-snl" href="#">Specialty</a><a class="fu-snl" href="#">Flagpoles &amp; Hardware <span class="ch">▾</span></a>
+    </div>
+    <!-- HERO — no strip above it -->
+    <div class="fu-hero"><div class="fu-hero-bg"></div><div class="fu-hero-cnt"><h2 class="fu-h1">Proudly flying the American spirit</h2><p class="fu-hsub">Flags USA is a women-owned, family-run business dedicated to providing the highest-quality, American-made flags for every home, business, and heart.</p><a class="fu-hbtn" href="#">100% Made in the USA</a></div></div>
+    <!-- STRIP BELOW HERO -->
+    <div class="banner-a" style="border-top: 3px solid var(--red);">
+      <div class="ba-logos"><img class="flogo" src="./FlagsUSA-logo.svg" alt="Flags USA"><span class="bx">×</span><img class="ulogo" src="./United_Service_Organizations_logo.svg.png" alt="USO"></div>
+      <div class="ba-div"></div>
+      <div class="ba-copy"><span class="ba-news">We have news!</span><span class="ba-sep">—</span><span class="ba-text">Flags USA is now an official partner of the USO.</span></div>
+      <a class="ba-cta" href="#">See the story <svg class="arr" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+
+  <div class="view-hd"><span class="vl">Standalone component</span><div class="vr"></div></div>
+  <div class="sa-wrap">
+    <div class="banner-a">
+      <div class="ba-logos"><img class="flogo" src="./FlagsUSA-logo.svg" alt="Flags USA"><span class="bx">×</span><img class="ulogo" src="./United_Service_Organizations_logo.svg.png" alt="USO"></div>
+      <div class="ba-div"></div>
+      <div class="ba-copy"><span class="ba-news">We have news!</span><span class="ba-sep">—</span><span class="ba-text">Flags USA is now an official partner of the USO.</span></div>
+      <a class="ba-cta" href="#">See the story <svg class="arr" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     OPTION D — DARK STRIP BELOW THE HERO
+══════════════════════════════════════════════════════════ -->
+<section class="concept">
+  <div class="concept-hd">
+    <span class="ctag ctag-d">Option D</span>
+    <div>
+      <h2>Dark strip — below hero</h2>
+      <p>Same placement as C but in brand navy. Hero still runs fully uninterrupted, announcement drops below with more weight and contrast against the page content that follows.</p>
+    </div>
+  </div>
+
+  <div class="view-hd"><span class="vl">On the homepage</span><div class="vr"></div></div>
+  <div class="chrome">
+    <div class="chrome-bar"><div class="cd cd-r"></div><div class="cd cd-y"></div><div class="cd cd-g"></div><div class="chrome-url">flagsusa.com</div></div>
+    <div class="fu-topbar">
+      <div class="fu-tl">Get 15% off your first order when you <a href="#">subscribe</a>.</div>
+      <div class="fu-tr"><a href="#">About Us</a><span>|</span><a href="#">Flag Info</a></div>
+    </div>
+    <div class="fu-mainnav">
+      <div class="fu-logo"><img src="./FlagsUSA-logo.svg" alt="Flags USA"></div>
+      <div class="fu-search"><div class="fu-sc">All <span class="chv">▾</span></div><input class="fu-si" type="text" placeholder="Search for flag sets" disabled></div>
+      <div class="fu-icons">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </div>
+    </div>
+    <div class="fu-subnav">
+      <a class="fu-snl active" href="#">Home</a><a class="fu-snl" href="#">Shop All <span class="ch">▾</span></a><a class="fu-snl" href="#">American Flags <span class="ch">▾</span></a><a class="fu-snl" href="#">State <span class="ch">▾</span></a><a class="fu-snl" href="#">World <span class="ch">▾</span></a><a class="fu-snl" href="#">Military &amp; Support <span class="ch">▾</span></a><a class="fu-snl" href="#">Custom <span class="ch">▾</span></a><a class="fu-snl" href="#">Specialty</a><a class="fu-snl" href="#">Flagpoles &amp; Hardware <span class="ch">▾</span></a>
+    </div>
+    <div class="fu-hero"><div class="fu-hero-bg"></div><div class="fu-hero-cnt"><h2 class="fu-h1">Proudly flying the American spirit</h2><p class="fu-hsub">Flags USA is a women-owned, family-run business dedicated to providing the highest-quality, American-made flags for every home, business, and heart.</p><a class="fu-hbtn" href="#">100% Made in the USA</a></div></div>
+    <!-- DARK STRIP BELOW HERO -->
+    <div class="banner-b">
+      <div class="bb-logos"><img class="flogo" src="./FlagsUSA-logo.svg" alt="Flags USA"><span class="bx">×</span><img class="ulogo" src="./United_Service_Organizations_logo.svg.png" alt="USO"></div>
+      <div class="bb-copy"><span class="bb-news">We have news!</span><span class="bb-sep">—</span><span class="bb-text">Flags USA is proud to be an official partner of the USO.</span></div>
+      <a class="bb-cta" href="#">Learn more <svg class="arr" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+
+  <div class="view-hd"><span class="vl">Standalone component</span><div class="vr"></div></div>
+  <div class="sa-wrap">
+    <div class="banner-b">
+      <div class="bb-logos"><img class="flogo" src="./FlagsUSA-logo.svg" alt="Flags USA"><span class="bx">×</span><img class="ulogo" src="./United_Service_Organizations_logo.svg.png" alt="USO"></div>
+      <div class="bb-copy"><span class="bb-news">We have news!</span><span class="bb-sep">—</span><span class="bb-text">Flags USA is proud to be an official partner of the USO.</span></div>
+      <a class="bb-cta" href="#">Learn more <svg class="arr" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     OPTION E — HERO FLOATING CARD (smaller)
+══════════════════════════════════════════════════════════ -->
+<section class="concept">
+  <div class="concept-hd">
+    <span class="ctag ctag-e">Option E</span>
+    <div>
+      <h2>Hero CTA card — inside the hero</h2>
+      <p>No strip at all. A compact floating card anchors to the bottom-right of the hero. The announcement lives inside the brand moment without interrupting the page flow.</p>
+    </div>
+  </div>
+
+  <div class="view-hd"><span class="vl">On the homepage</span><div class="vr"></div></div>
+  <div class="chrome">
+    <div class="chrome-bar"><div class="cd cd-r"></div><div class="cd cd-y"></div><div class="cd cd-g"></div><div class="chrome-url">flagsusa.com</div></div>
+    <div class="fu-topbar">
+      <div class="fu-tl">Get 15% off your first order when you <a href="#">subscribe</a>.</div>
+      <div class="fu-tr"><a href="#">About Us</a><span>|</span><a href="#">Flag Info</a></div>
+    </div>
+    <div class="fu-mainnav">
+      <div class="fu-logo"><img src="./FlagsUSA-logo.svg" alt="Flags USA"></div>
+      <div class="fu-search"><div class="fu-sc">All <span class="chv">▾</span></div><input class="fu-si" type="text" placeholder="Search for flag sets" disabled></div>
+      <div class="fu-icons">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </div>
+    </div>
+    <div class="fu-subnav">
+      <a class="fu-snl active" href="#">Home</a><a class="fu-snl" href="#">Shop All <span class="ch">▾</span></a><a class="fu-snl" href="#">American Flags <span class="ch">▾</span></a><a class="fu-snl" href="#">State <span class="ch">▾</span></a><a class="fu-snl" href="#">World <span class="ch">▾</span></a><a class="fu-snl" href="#">Military &amp; Support <span class="ch">▾</span></a><a class="fu-snl" href="#">Custom <span class="ch">▾</span></a><a class="fu-snl" href="#">Specialty</a><a class="fu-snl" href="#">Flagpoles &amp; Hardware <span class="ch">▾</span></a>
+    </div>
+    <div class="fu-hero">
+      <div class="fu-hero-bg"></div>
+      <div class="fu-hero-cnt"><h2 class="fu-h1">Proudly flying the American spirit</h2><p class="fu-hsub">Flags USA is a women-owned, family-run business dedicated to providing the highest-quality, American-made flags for every home, business, and heart.</p><a class="fu-hbtn" href="#">100% Made in the USA</a></div>
+      <!-- FLOATING CARD -->
+      <div class="hero-card">
+        <div class="hc-pill"><span class="dot"></span>Partnership news</div>
+        <h3 class="hc-title">We have news!</h3>
+        <div class="hc-logos"><img class="flogo" src="./FlagsUSA-logo.svg" alt="Flags USA"><span class="bx">×</span><img class="ulogo" src="./United_Service_Organizations_logo.svg.png" alt="USO"></div>
+        <p class="hc-body">Flags USA is proud to be an official partner of the USO — standing with service members and their families.</p>
+        <a class="hc-cta" href="#">Learn more <svg class="arr" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="view-hd"><span class="vl">Standalone card</span><div class="vr"></div></div>
+  <div class="sa-card-wrap">
+    <div class="hero-card-static">
+      <div class="hc-pill"><span class="dot"></span>Partnership news</div>
+      <h3 class="hc-title">We have news!</h3>
+      <div class="hc-logos"><img class="flogo" src="./FlagsUSA-logo.svg" alt="Flags USA"><span class="bx">×</span><img class="ulogo" src="./United_Service_Organizations_logo.svg.png" alt="USO"></div>
+      <p class="hc-body">Flags USA is proud to be an official partner of the USO — standing with service members and their families.</p>
+      <a class="hc-cta" href="#">Learn more <svg class="arr" width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M11.5 7L8 3.5M11.5 7L8 10.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<div class="pg-foot"></div>
+</body>
+</html>

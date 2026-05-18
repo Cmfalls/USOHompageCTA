@@ -1,0 +1,34 @@
+<svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Reusable 5-point star centered at 0,0 radius ~14 -->
+    <polygon id="star" points="0,-14 3.3,-4.5 13.3,-4.5 5.4,1.7 8.2,11.4 0,5.5 -8.2,11.4 -5.4,1.7 -13.3,-4.5 -3.3,-4.5" fill="#ffffff"/>
+  </defs>
+
+  <!-- Red outer border -->
+  <rect x="0" y="0" width="400" height="280" fill="#bb133e"/>
+  <!-- White inner border -->
+  <rect x="12" y="12" width="376" height="256" fill="#ffffff"/>
+  <!-- Navy field -->
+  <rect x="24" y="24" width="352" height="232" fill="#002147"/>
+
+  <!-- Stars — left column (4 stars) -->
+  <use href="#star" transform="translate(62,84)"/>
+  <use href="#star" transform="translate(62,126)"/>
+  <use href="#star" transform="translate(62,168)"/>
+  <use href="#star" transform="translate(62,210)"/>
+
+  <!-- Stars — right column (4 stars) -->
+  <use href="#star" transform="translate(338,84)"/>
+  <use href="#star" transform="translate(338,126)"/>
+  <use href="#star" transform="translate(338,168)"/>
+  <use href="#star" transform="translate(338,210)"/>
+
+  <!-- USO lettering -->
+  <text x="200" y="196"
+        text-anchor="middle"
+        font-family="'Arial Black', 'Impact', 'Franklin Gothic Heavy', sans-serif"
+        font-size="148"
+        font-weight="900"
+        fill="#ffffff"
+        letter-spacing="-2">USO</text>
+</svg>
